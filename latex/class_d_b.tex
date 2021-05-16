@@ -1,0 +1,293 @@
+\hypertarget{class_d_b}{}\doxysection{DB Class Reference}
+\label{class_d_b}\index{DB@{DB}}
+
+
+{\ttfamily \#include $<$D\+B.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{class_d_b_a25cb6efd9a30148e0ee039f05df11eb5}{connect\+\_\+db}} ()
+\item 
+bool \mbox{\hyperlink{class_d_b_a0315d03f5af015c496abb9335af7d3c3}{logining}} (String, String)
+\item 
+bool \mbox{\hyperlink{class_d_b_a377e752e8c62266fecf1299586078ea4}{signup}} (String, String)
+\item 
+bool \mbox{\hyperlink{class_d_b_aca9334bd7f5fdc80281a9250ae3f7e2b}{check\+\_\+login}} (String)
+\item 
+bool \mbox{\hyperlink{class_d_b_af5134c98676742c95bc3c4e29ccc82ee}{check\+\_\+pass}} (String, String)
+\item 
+void \mbox{\hyperlink{class_d_b_ac71696606d9cc1936f10ea5860b7a000}{get\+\_\+event}} (String, String, String, String, T\+Label $\ast$)
+\item 
+void \mbox{\hyperlink{class_d_b_ae37149e0bbbc37f64cceb5965977f9ce}{get\+\_\+event\+\_\+id}} (String, String, String, String, T\+Label $\ast$)
+\item 
+void \mbox{\hyperlink{class_d_b_a5cd69ad5b26f2fbc1b9e508b028c9e80}{add\+\_\+event}} (String, String, String, String, String, String, String)
+\item 
+void \mbox{\hyperlink{class_d_b_a7b28c0050f538b28ff91d699eec4f1dd}{delete\+\_\+event}} (String, String, String, String, String)
+\item 
+void \mbox{\hyperlink{class_d_b_a74adeed242bd200d55629732a6aff698}{edit\+\_\+event}} (String, String, T\+Edit $\ast$, T\+Edit $\ast$)
+\item 
+void \mbox{\hyperlink{class_d_b_a14dd6af4bd55648f564eb68e38e9ac5b}{edit\+\_\+event2}} (String, String, T\+Edit $\ast$)
+\item 
+void \mbox{\hyperlink{class_d_b_aaee0f375593a8696ed24c232c65e2be5}{update\+\_\+event}} (String, String, String, String, String, String, String, String)
+\item 
+int \mbox{\hyperlink{class_d_b_a431de2a1f446638623fcf7c28c8eaa81}{check\+\_\+id}} (String, String, String, String, String)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+klasa \mbox{\hyperlink{class_d_b}{DB}} zawiera funkcje odpowiadajace za komunikacje z baza danych 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_d_b_a5cd69ad5b26f2fbc1b9e508b028c9e80}\label{class_d_b_a5cd69ad5b26f2fbc1b9e508b028c9e80}} 
+\index{DB@{DB}!add\_event@{add\_event}}
+\index{add\_event@{add\_event}!DB@{DB}}
+\doxysubsubsection{\texorpdfstring{add\_event()}{add\_event()}}
+{\footnotesize\ttfamily void D\+B\+::add\+\_\+event (\begin{DoxyParamCaption}\item[{String}]{user,  }\item[{String}]{nazwa,  }\item[{String}]{year,  }\item[{String}]{month,  }\item[{String}]{day,  }\item[{String}]{godz,  }\item[{String}]{min }\end{DoxyParamCaption})}
+
+funkcja dodaje wydarzenie uzytkownikowi ~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em 1} & login uzytkownika ktory dodaje wydarzenie \\
+\hline
+{\em 2} & nazwa wydarzenia \\
+\hline
+{\em 3} & rok wydarzenia \\
+\hline
+{\em 4} & miesiac wydarzenia \\
+\hline
+{\em 5} & dzien wydarzenia \\
+\hline
+{\em 6} & godzina wydarzenia \\
+\hline
+{\em 7} & minuta wydarzenia \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_b_a431de2a1f446638623fcf7c28c8eaa81}\label{class_d_b_a431de2a1f446638623fcf7c28c8eaa81}} 
+\index{DB@{DB}!check\_id@{check\_id}}
+\index{check\_id@{check\_id}!DB@{DB}}
+\doxysubsubsection{\texorpdfstring{check\_id()}{check\_id()}}
+{\footnotesize\ttfamily int D\+B\+::check\+\_\+id (\begin{DoxyParamCaption}\item[{String}]{user,  }\item[{String}]{year,  }\item[{String}]{month,  }\item[{String}]{day,  }\item[{String}]{id }\end{DoxyParamCaption})}
+
+funkcja sprawdzajaca czy podany uzytkownik ma wydazenie o podanym id 
+\begin{DoxyParams}{Parameters}
+{\em 1} & login uzykownika edytowanego wydarzenia \\
+\hline
+{\em 2} & rok wydarzenia \\
+\hline
+{\em 3} & miesiac wydarzenia \\
+\hline
+{\em 5} & id wydarzenia \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_b_ae37149e0bbbc37f64cceb5965977f9ce}{get\+\_\+event\+\_\+id()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_d_b_aca9334bd7f5fdc80281a9250ae3f7e2b}\label{class_d_b_aca9334bd7f5fdc80281a9250ae3f7e2b}} 
+\index{DB@{DB}!check\_login@{check\_login}}
+\index{check\_login@{check\_login}!DB@{DB}}
+\doxysubsubsection{\texorpdfstring{check\_login()}{check\_login()}}
+{\footnotesize\ttfamily bool D\+B\+::check\+\_\+login (\begin{DoxyParamCaption}\item[{String}]{login }\end{DoxyParamCaption})}
+
+funkcja sprawdza czy istnieje uzytkownik o podanym loginie 
+\begin{DoxyParams}{Parameters}
+{\em 1} & login podany przez uzytkownika \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+funkcja zwraca 0 jesli podany login nie wystepuje w bazie lub 1 jesli wystepuje 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_b_af5134c98676742c95bc3c4e29ccc82ee}\label{class_d_b_af5134c98676742c95bc3c4e29ccc82ee}} 
+\index{DB@{DB}!check\_pass@{check\_pass}}
+\index{check\_pass@{check\_pass}!DB@{DB}}
+\doxysubsubsection{\texorpdfstring{check\_pass()}{check\_pass()}}
+{\footnotesize\ttfamily bool D\+B\+::check\+\_\+pass (\begin{DoxyParamCaption}\item[{String}]{pass,  }\item[{String}]{repass }\end{DoxyParamCaption})}
+
+funkcja sprawdza czy hasla 2 hasla sa identyczne 
+\begin{DoxyParams}{Parameters}
+{\em 1} & haslo podane przez uzytkownika \\
+\hline
+{\em 2} & potwierdzenie hasla \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+funkcja zwraca 0 jesli hasla sa rozne lub 1 jesli hasla sa identyczne 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_b_a25cb6efd9a30148e0ee039f05df11eb5}\label{class_d_b_a25cb6efd9a30148e0ee039f05df11eb5}} 
+\index{DB@{DB}!connect\_db@{connect\_db}}
+\index{connect\_db@{connect\_db}!DB@{DB}}
+\doxysubsubsection{\texorpdfstring{connect\_db()}{connect\_db()}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ D\+B\+::connect\+\_\+db (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+funkcja odpowiedzialna za polaczaenie z baza \begin{DoxyReturn}{Returns}
+funkcja zwraca wskaznik na polaczenie z baza 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_b_a7b28c0050f538b28ff91d699eec4f1dd}\label{class_d_b_a7b28c0050f538b28ff91d699eec4f1dd}} 
+\index{DB@{DB}!delete\_event@{delete\_event}}
+\index{delete\_event@{delete\_event}!DB@{DB}}
+\doxysubsubsection{\texorpdfstring{delete\_event()}{delete\_event()}}
+{\footnotesize\ttfamily void D\+B\+::delete\+\_\+event (\begin{DoxyParamCaption}\item[{String}]{user,  }\item[{String}]{id,  }\item[{String}]{year,  }\item[{String}]{month,  }\item[{String}]{day }\end{DoxyParamCaption})}
+
+funkcja usuwa wydarzenie o podanym id 
+\begin{DoxyParams}{Parameters}
+{\em 1} & login uzytkownika ktory usuwa wydarzenie \\
+\hline
+{\em 2} & id wydarzenia ktore ma zostac usuniete \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_b_ae37149e0bbbc37f64cceb5965977f9ce}{get\+\_\+event\+\_\+id()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em 3} & rok wydarzenia \\
+\hline
+{\em 4} & miesiac wydarzenia \\
+\hline
+{\em 5} & dzien wydarzenia \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_b_a74adeed242bd200d55629732a6aff698}\label{class_d_b_a74adeed242bd200d55629732a6aff698}} 
+\index{DB@{DB}!edit\_event@{edit\_event}}
+\index{edit\_event@{edit\_event}!DB@{DB}}
+\doxysubsubsection{\texorpdfstring{edit\_event()}{edit\_event()}}
+{\footnotesize\ttfamily void D\+B\+::edit\+\_\+event (\begin{DoxyParamCaption}\item[{String}]{user,  }\item[{String}]{id,  }\item[{T\+Edit $\ast$}]{description,  }\item[{T\+Edit $\ast$}]{hour }\end{DoxyParamCaption})}
+
+funkcja pozwalajaca na edytowanie wydarzenia 
+\begin{DoxyParams}{Parameters}
+{\em 1} & login uzykownika edytowanego wydarzenia \\
+\hline
+{\em 2} & id wydarzenia do edytowania \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_b_ae37149e0bbbc37f64cceb5965977f9ce}{get\+\_\+event\+\_\+id()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em 3} & wskaznik na pole tekstowe w ktorym bedziemy edytowac opis \\
+\hline
+{\em 4} & wskaznik na pole w ktorym bedziemy edytowac godzine \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_b_a14dd6af4bd55648f564eb68e38e9ac5b}\label{class_d_b_a14dd6af4bd55648f564eb68e38e9ac5b}} 
+\index{DB@{DB}!edit\_event2@{edit\_event2}}
+\index{edit\_event2@{edit\_event2}!DB@{DB}}
+\doxysubsubsection{\texorpdfstring{edit\_event2()}{edit\_event2()}}
+{\footnotesize\ttfamily void D\+B\+::edit\+\_\+event2 (\begin{DoxyParamCaption}\item[{String}]{user,  }\item[{String}]{id,  }\item[{T\+Edit $\ast$}]{min }\end{DoxyParamCaption})}
+
+funkcja pozwalajaca na edytowanie wydarzenia 
+\begin{DoxyParams}{Parameters}
+{\em 1} & login uzykownika edytowanego wydarzenia \\
+\hline
+{\em 2} & id wydarzenia do edytowania \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_b_ae37149e0bbbc37f64cceb5965977f9ce}{get\+\_\+event\+\_\+id()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em 4} & wskaznik na pole w ktorym bedziemy edytowac minute \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_b_ac71696606d9cc1936f10ea5860b7a000}\label{class_d_b_ac71696606d9cc1936f10ea5860b7a000}} 
+\index{DB@{DB}!get\_event@{get\_event}}
+\index{get\_event@{get\_event}!DB@{DB}}
+\doxysubsubsection{\texorpdfstring{get\_event()}{get\_event()}}
+{\footnotesize\ttfamily void D\+B\+::get\+\_\+event (\begin{DoxyParamCaption}\item[{String}]{user,  }\item[{String}]{year,  }\item[{String}]{month,  }\item[{String}]{day,  }\item[{T\+Label $\ast$}]{label }\end{DoxyParamCaption})}
+
+funkcja pobiera event z bazy danych 
+\begin{DoxyParams}{Parameters}
+{\em 1} & login uzytkowika ktory probuje pobrac swoje wydarzenie \\
+\hline
+{\em 2} & rok w ktorym wydarzenie ma wystepowac \\
+\hline
+{\em 3} & miesiac w ktorym wydarzenie ma wystepowac \\
+\hline
+{\em 4} & dzien w ktorym wydarzenie ma wystepowac \\
+\hline
+{\em 5} & wskaznik miejsce w ktorym zostana wypisane zdarzenia z danego dnia \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_b_ae37149e0bbbc37f64cceb5965977f9ce}\label{class_d_b_ae37149e0bbbc37f64cceb5965977f9ce}} 
+\index{DB@{DB}!get\_event\_id@{get\_event\_id}}
+\index{get\_event\_id@{get\_event\_id}!DB@{DB}}
+\doxysubsubsection{\texorpdfstring{get\_event\_id()}{get\_event\_id()}}
+{\footnotesize\ttfamily void D\+B\+::get\+\_\+event\+\_\+id (\begin{DoxyParamCaption}\item[{String}]{user,  }\item[{String}]{year,  }\item[{String}]{month,  }\item[{String}]{day,  }\item[{T\+Label $\ast$}]{label }\end{DoxyParamCaption})}
+
+funkcja pobiera id wydarzen z danego dnia ktore sa wyswietlone uzytkownikowi 
+\begin{DoxyParams}{Parameters}
+{\em 1} & rok w ktorym wystepuje dane wydarzenie \\
+\hline
+{\em 2} & miesiac w ktorym wystepuje dane wydarzenie \\
+\hline
+{\em 3} & dzien w ktorym wystepuje dane wydarzenie \\
+\hline
+{\em 4} & wskaznik na miejsce w ktorym wypisane sa wydarzenia z danego dnia \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_d_b_a7b28c0050f538b28ff91d699eec4f1dd}{delete\+\_\+event()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_d_b_a0315d03f5af015c496abb9335af7d3c3}\label{class_d_b_a0315d03f5af015c496abb9335af7d3c3}} 
+\index{DB@{DB}!logining@{logining}}
+\index{logining@{logining}!DB@{DB}}
+\doxysubsubsection{\texorpdfstring{logining()}{logining()}}
+{\footnotesize\ttfamily bool D\+B\+::logining (\begin{DoxyParamCaption}\item[{String}]{login,  }\item[{String}]{password }\end{DoxyParamCaption})}
+
+funkcja logowania 
+\begin{DoxyParams}{Parameters}
+{\em 1} & login podany przez uzytkownika \\
+\hline
+{\em 2} & haslo padane przez uzytkownika \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+funkcja zwraca czy mozna sie zalogowac na podane dane 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_b_a377e752e8c62266fecf1299586078ea4}\label{class_d_b_a377e752e8c62266fecf1299586078ea4}} 
+\index{DB@{DB}!signup@{signup}}
+\index{signup@{signup}!DB@{DB}}
+\doxysubsubsection{\texorpdfstring{signup()}{signup()}}
+{\footnotesize\ttfamily bool D\+B\+::signup (\begin{DoxyParamCaption}\item[{String}]{login,  }\item[{String}]{password }\end{DoxyParamCaption})}
+
+funkcja rejestracji 
+\begin{DoxyParams}{Parameters}
+{\em 1} & login podany przez uzytkownika \\
+\hline
+{\em 2} & haslo padane przez uzytkownika \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+funkcja zwraca 0 jesli rejestracja sie nie powiodla lub 1 jesli zarejestrowano poprawnie uzytkownika 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_b_aaee0f375593a8696ed24c232c65e2be5}\label{class_d_b_aaee0f375593a8696ed24c232c65e2be5}} 
+\index{DB@{DB}!update\_event@{update\_event}}
+\index{update\_event@{update\_event}!DB@{DB}}
+\doxysubsubsection{\texorpdfstring{update\_event()}{update\_event()}}
+{\footnotesize\ttfamily void D\+B\+::update\+\_\+event (\begin{DoxyParamCaption}\item[{String}]{user,  }\item[{String}]{nazwa,  }\item[{String}]{year,  }\item[{String}]{month,  }\item[{String}]{day,  }\item[{String}]{godz,  }\item[{String}]{min,  }\item[{String}]{id }\end{DoxyParamCaption})}
+
+funkcja pozwalajaca na aktualizacje wydarzenia 
+\begin{DoxyParams}{Parameters}
+{\em 1} & login uzykownika edytowanego wydarzenia \\
+\hline
+{\em 2} & id wydarzenia do edytowania \\
+\hline
+{\em 3} & rok aktualizowanego wydarzenia \\
+\hline
+{\em 4} & miesiac aktualizowanego wydarzenia \\
+\hline
+{\em 5} & dzien aktualizowanego wydarzenia \\
+\hline
+{\em 6} & godzina aktualizowanego wydarzenia \\
+\hline
+{\em 7} & min aktualizowanego wydarzenia \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_d_b_8h}{D\+B.\+h}}\item 
+\mbox{\hyperlink{_d_b_8cpp}{D\+B.\+cpp}}\end{DoxyCompactItemize}
